@@ -27,7 +27,7 @@ print "fitting data",result[0][0],result[0][1],result[0][2]
 x_result=np.linspace(0,300,300)           
 y_result=para(x_result,result[0][0],result[0][1],result[0][2])
 pl.plot(x,y,'ro',label='sample point')
-pl.plot(x_result,y_result,label='fit model y=%s')
+pl.plot(x_result,y_result,label='y=%f/(x-%f)+%f'%(result[0][0],result[0][1],result[0][2]))
 pl.xlabel('Temperature(K)')
 pl.ylabel('Susceptibility')
 pl.legend()
